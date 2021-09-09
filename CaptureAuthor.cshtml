@@ -1,0 +1,73 @@
+﻿@model ADMPublishers.DataAccess.Authors
+
+@{
+    ViewData["Title"] = "Capture Author";
+}
+
+<h1>CaptureAuthor</h1>
+
+<h4>Authors</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CaptureAuthor">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Au_Id" class="control-label">Author Id<span style="color:red">&#42;</span></label>
+                <input asp-for="Au_Id" class="form-control" required />
+                <span asp-validation-for="Au_Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Au_LName" class="control-label">Last Name<span style="color:red">&#42;</span></label>
+                <input asp-for="Au_LName" class="form-control" required />
+                <span asp-validation-for="Au_LName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Au_FName" class="control-label">First Name<span style="color:red">&#42;</span></label>
+                <input asp-for="Au_FName" class="form-control" />
+                <span asp-validation-for="Au_FName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label">Phone Number<span style="color:red">&#42;</span></label>
+                <input asp-for="Phone" class="form-control" required />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label">Address<span style="color:red">&#42;</span></label>
+                <input asp-for="Address" class="form-control" required />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label">City<span style="color:red">&#42;</span></label>
+                <input asp-for="City" class="form-control" required />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="State" class="control-label">State<span style="color:red">&#42;</span></label>
+                <input asp-for="State" class="form-control" required />
+                <span asp-validation-for="State" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Zip" class="control-label">Zip Code<span style="color:red">&#42;</span></label>
+                <input asp-for="Zip" class="form-control" required />
+                <span asp-validation-for="Zip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contract" class="control-label">Contract<span style="color:red">&#42;</span></label>
+                <input asp-for="Contract" class="form-control" required />
+                <span asp-validation-for="Contract" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
